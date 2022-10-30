@@ -1,0 +1,10 @@
+http://example.com/about/index.html
+http://example.com/2022/10/30/test/
+http://example.com/2022/10/30/hello-world/
+http://example.com/
+http://example.com/tags/hello/
+http://example.com/tags/Games/
+http://example.com/tags/hexo/
+http://example.com/tags/BlueLake/
+http://example.com/categories/test/
+http://example.com/categories/Hexo%E5%8D%9A%E5%AE%A2/
