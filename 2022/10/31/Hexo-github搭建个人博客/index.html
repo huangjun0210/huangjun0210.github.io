@@ -207,7 +207,7 @@
 
 <p>主题默认是展示四个菜单，即<code>主页home</code>，<code>归档archive</code>，<code>关于about</code>，<code>订阅RSS</code>；about需要手动添加，RSS需要安装插件，若您并不需要，可以直接注释掉。</p>
 <h4 id="2-6-4-添加about页"><a href="#2-6-4-添加about页" class="headerlink" title="2.6.4 添加about页"></a>2.6.4 添加about页</h4><p>此主题默认page页面是关于我页面的布局，在根目录下打开命令行窗口，生成一个关于我页面：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git bashhexo new page &#x27;about&#x27;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new page &#x27;about&#x27;</span><br></pre></td></tr></table></figure>
 
 <p>打开<code>主题_config.yml</code>，补全about页面的详细信息：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">about:</span><br><span class="line">  photo_url: # 头像的链接地址 e.g. http://cdn.itdn.top/blog/themeauthor.jpg</span><br><span class="line">  items:</span><br><span class="line">  - label: email # 个人邮箱</span><br><span class="line">    url: ## Your email with mailto: e.g.  mailto:zhenggchaoo@gmail.com</span><br><span class="line">    title: ## Your email e.g.  zhenggchaoo@gmail.com</span><br><span class="line">  - label: github # github</span><br><span class="line">    url: ## Your github&#x27;url e.g.  https://github.com/chaooo</span><br><span class="line">    title: ## Your github&#x27;name e.g.  chaooo</span><br><span class="line">  - label: weibo # 微博</span><br><span class="line">    url: ## Your weibo&#x27;s url e.g.  http://weibo.com/zhengchaooo</span><br><span class="line">    title: ## Your weibo&#x27;s name e.g.  秋过冬漫长</span><br></pre></td></tr></table></figure>
@@ -223,10 +223,14 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">local_search: true</span><br></pre></td></tr></table></figure>
 
 <h4 id="2-6-6-首页添加文章置顶"><a href="#2-6-6-首页添加文章置顶" class="headerlink" title="2.6.6 首页添加文章置顶"></a>2.6.6 首页添加文章置顶</h4><p>在根目录下打开命令行窗口安装：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git bashnpm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm uninstall hexo-generator-index --save</span><br><span class="line">npm install hexo-generator-index-pin-top --save</span><br></pre></td></tr></table></figure>
 
 <p>然后在需要置顶的文章的Front-matter中加上top: true即可。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: BlueLake博客主题的详细配置</span><br><span class="line">tags: [hexo,BlueLake]</span><br><span class="line">categories: Hexo博客</span><br><span class="line">top: true</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-6-7-撰写文章"><a href="#2-6-7-撰写文章" class="headerlink" title="2.6.7 撰写文章"></a>2.6.7 撰写文章</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new post &quot;新建博客文章名&quot;</span><br></pre></td></tr></table></figure>
+
+
 
 <h3 id="2-7-集成第三方服务"><a href="#2-7-集成第三方服务" class="headerlink" title="2.7 集成第三方服务"></a>2.7 集成第三方服务</h3><h4 id="2-7-1-添加评论"><a href="#2-7-1-添加评论" class="headerlink" title="2.7.1 添加评论"></a>2.7.1 添加评论</h4><p>目前主题集成多种第三方评论，比如基于Github Issue的<a target="_blank" rel="noopener" href="https://gitalk.github.io/">GITALK</a>），<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a>评论，<a target="_blank" rel="noopener" href="http://changyan.kuaizhan.com/">畅言评论</a>，<a target="_blank" rel="noopener" href="https://disqus.com/">Disqus评论</a>、<a target="_blank" rel="noopener" href="https://livere.com/">来必力评论</a>、<a target="_blank" rel="noopener" href="http://www.uyan.cc/">友言评论</a>、<a target="_blank" rel="noopener" href="https://gentie.163.com/info.html">网易云跟帖评论</a>等。</p>
 <p>配置<code>主题_config.yml</code>：</p>
@@ -249,7 +253,7 @@
   <div class="widget-wrap" id="toc-wrap">
     <h3 class="widget-title"><i class="fa fa-toc"></i> 文章目录</h3>
     <div class="widget">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Hexo"><span class="toc-text">1. 安装 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85BlueLake"><span class="toc-text">2. 安装BlueLake</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">2.1 安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98%E6%8F%92%E4%BB%B6"><span class="toc-text">2.2 安装主题插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%90%AF%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="toc-text">2.3 启用主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%AA%8C%E8%AF%81"><span class="toc-text">2.4 验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98"><span class="toc-text">2.5 更新主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E9%85%8D%E7%BD%AE"><span class="toc-text">2.6 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-1-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99%E5%A4%B4%E9%83%A8%E6%98%BE%E7%A4%BA%E6%96%87%E5%AD%97"><span class="toc-text">2.6.1  配置网站头部显示文字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-2-%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80"><span class="toc-text">2.6.2 设置语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-3-%E8%AE%BE%E7%BD%AE%E8%8F%9C%E5%8D%95"><span class="toc-text">2.6.3 设置菜单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-4-%E6%B7%BB%E5%8A%A0about%E9%A1%B5"><span class="toc-text">2.6.4 添加about页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-5-%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2"><span class="toc-text">2.6.5 添加本地搜索</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-6-%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="toc-text">2.6.6 首页添加文章置顶</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-%E9%9B%86%E6%88%90%E7%AC%AC%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1"><span class="toc-text">2.7 集成第三方服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-7-1-%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA"><span class="toc-text">2.7.1 添加评论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-7-2-%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1"><span class="toc-text">2.7.2 站点统计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-2-1-%E5%8D%9C%E7%AE%97%E5%AD%90%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">2.7.2.1 卜算子阅读次数统计</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-2-2-%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1"><span class="toc-text">2.7.2.2 百度统计</span></a></li></ol></li></ol></li></ol></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-Hexo"><span class="toc-text">1. 安装 Hexo</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%89%E8%A3%85BlueLake"><span class="toc-text">2. 安装BlueLake</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">2.1 安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98%E6%8F%92%E4%BB%B6"><span class="toc-text">2.2 安装主题插件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-%E5%90%AF%E7%94%A8%E4%B8%BB%E9%A2%98"><span class="toc-text">2.3 启用主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E9%AA%8C%E8%AF%81"><span class="toc-text">2.4 验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E6%9B%B4%E6%96%B0%E4%B8%BB%E9%A2%98"><span class="toc-text">2.5 更新主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E9%85%8D%E7%BD%AE"><span class="toc-text">2.6 配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-1-%E9%85%8D%E7%BD%AE%E7%BD%91%E7%AB%99%E5%A4%B4%E9%83%A8%E6%98%BE%E7%A4%BA%E6%96%87%E5%AD%97"><span class="toc-text">2.6.1  配置网站头部显示文字</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-2-%E8%AE%BE%E7%BD%AE%E8%AF%AD%E8%A8%80"><span class="toc-text">2.6.2 设置语言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-3-%E8%AE%BE%E7%BD%AE%E8%8F%9C%E5%8D%95"><span class="toc-text">2.6.3 设置菜单</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-4-%E6%B7%BB%E5%8A%A0about%E9%A1%B5"><span class="toc-text">2.6.4 添加about页</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-5-%E6%B7%BB%E5%8A%A0%E6%9C%AC%E5%9C%B0%E6%90%9C%E7%B4%A2"><span class="toc-text">2.6.5 添加本地搜索</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-6-%E9%A6%96%E9%A1%B5%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6"><span class="toc-text">2.6.6 首页添加文章置顶</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-6-7-%E6%92%B0%E5%86%99%E6%96%87%E7%AB%A0"><span class="toc-text">2.6.7 撰写文章</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-7-%E9%9B%86%E6%88%90%E7%AC%AC%E4%B8%89%E6%96%B9%E6%9C%8D%E5%8A%A1"><span class="toc-text">2.7 集成第三方服务</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-7-1-%E6%B7%BB%E5%8A%A0%E8%AF%84%E8%AE%BA"><span class="toc-text">2.7.1 添加评论</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-7-2-%E7%AB%99%E7%82%B9%E7%BB%9F%E8%AE%A1"><span class="toc-text">2.7.2 站点统计</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-2-1-%E5%8D%9C%E7%AE%97%E5%AD%90%E9%98%85%E8%AF%BB%E6%AC%A1%E6%95%B0%E7%BB%9F%E8%AE%A1"><span class="toc-text">2.7.2.1 卜算子阅读次数统计</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-7-2-2-%E7%99%BE%E5%BA%A6%E7%BB%9F%E8%AE%A1"><span class="toc-text">2.7.2.2 百度统计</span></a></li></ol></li></ol></li></ol></li></ol>
     </div>
   </div>
 
@@ -285,15 +289,15 @@
         
 <nav id="article-nav">
   
-    <a href="/2022/10/30/test/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">older</strong>
+  
+    <a href="/2022/11/03/HashMap%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
       <div class="article-nav-title">
         
-          BlueLake博客主题的详细配置
+          HashMap的工作原理
         
       </div>
     </a>
-  
   
 </nav>
 
@@ -323,15 +327,11 @@
       <ul>
         
           <li>
+            <a href="/2022/11/03/HashMap%E7%9A%84%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86/">HashMap的工作原理</a>
+          </li>
+        
+          <li>
             <a href="/2022/10/31/Hexo-github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">Hexo+github搭建个人博客</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/30/test/">BlueLake博客主题的详细配置</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/30/hello-world/">Hello World</a>
           </li>
         
       </ul>
@@ -344,7 +344,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-tag"></i> 标签云</h3>
     <div class="widget tagcloud">
-      <a href="/tags/BlueLake/" style="font-size: 20px;">BlueLake</a> <a href="/tags/Games/" style="font-size: 10px;">Games</a> <a href="/tags/hello/" style="font-size: 10px;">hello</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a>
+      <a href="/tags/BlueLake/" style="font-size: 10px;">BlueLake</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a>
     </div>
   </div>
 
@@ -353,7 +353,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-classify"></i> 分类</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo%E5%8D%9A%E5%AE%A2/">Hexo博客</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/test/">test</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class="category-list-count">1</span></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">博客搭建</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9D%A2%E8%AF%95/">面试</a><span class="category-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -363,7 +363,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-archive"></i> 归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022年</a><span class="archive-list-count">3</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/">2022年</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
@@ -373,7 +373,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title"><i class="fa fa-tag"></i> 标签</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BlueLake/" rel="tag">BlueLake</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Games/" rel="tag">Games</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/" rel="tag">hello</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">2</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/BlueLake/" rel="tag">BlueLake</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/" rel="tag">Java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
