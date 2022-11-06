@@ -42,11 +42,26 @@
     <link href="https://huangjun0210.github.io/2022/11/06/%E7%A7%92%E6%9D%80%E6%95%B4%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>https://huangjun0210.github.io/2022/11/06/%E7%A7%92%E6%9D%80%E6%95%B4%E4%BD%93%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</id>
     <published>2022-11-06T14:03:52.000Z</published>
-    <updated>2022-11-06T14:03:53.028Z</updated>
+    <updated>2022-11-06T14:45:57.341Z</updated>
+    
+    <content type="html"><![CDATA[<p>1。客户端。</p><p>2。dns。A记录（Address）：将域名和IP做对应。 一个域名对应多个IP。负载均衡。</p><p>3。cdn。内容网络分发。（CNAME记录：域名到域名的映射。）| cdn缓存。</p><p>动态数据</p><p>静态数据：非个性化的数据。通用的 商品列表，商品详情。图片类等。</p><p>4。网关（过滤器）/负载均衡。（鉴权，黑名单（redis（黑名单ip的字符串），if （字符串contains(客户端来源的ip)）），限流等）。</p><p>确定黑名单：没有固定的办法，看业务。（10s 来 5次，就算黑名单。key=ip，value：1，incr）</p><p>5。服务-api-xxx和服务-service-xxxx（）</p><p>6。缓存（读多写少）。异步（缓存）</p><p>7。DB层：分区（对一个文件的操作，负载成对多个文件的操作），读写分离，分库分表。</p><p>并发读，并发写。短时间内，大量请求。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;1。客户端。&lt;/p&gt;
+&lt;p&gt;2。dns。A记录（Address）：将域名和IP做对应。 一个域名对应多个IP。负载均衡。&lt;/p&gt;
+&lt;p&gt;3。cdn。内容网络分发。（CNAME记录：域名到域名的映射。）| cdn缓存。&lt;/p&gt;
+&lt;p&gt;动态数据&lt;/p&gt;
+&lt;p&gt;静态数据：非个性化</summary>
+      
     
     
     
+    <category term="项目" scheme="https://huangjun0210.github.io/categories/%E9%A1%B9%E7%9B%AE/"/>
     
+    
+    <category term="面试" scheme="https://huangjun0210.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
