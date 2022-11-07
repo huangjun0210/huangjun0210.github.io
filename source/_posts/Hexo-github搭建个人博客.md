@@ -1,4 +1,5 @@
 ---
+dir: hexo
 title: Hexo+github搭建个人博客
 date: 2022-10-31 22:24:53
 tags: [hexo,BlueLake]

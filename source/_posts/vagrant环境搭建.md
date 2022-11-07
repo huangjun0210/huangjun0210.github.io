@@ -1,4 +1,5 @@
 ---
+dir: vagrant
 title: vagrant环境搭建
 date: 2022-11-06 17:21:43
 tags: [Vagrant, slurm, scow]

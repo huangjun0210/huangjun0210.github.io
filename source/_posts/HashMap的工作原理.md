@@ -1,4 +1,5 @@
 ---
+dir: java
 title: HashMap的工作原理
 date: 2022-11-03 23：08：46
 tags: [面试]
